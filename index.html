@@ -139,7 +139,7 @@
         </div>
         <div class="column is-4 is-flex is-flex-direction-column is-justify-content-center">
           <div class="box">
-            <p><strong>Note:</strong> VLA-Feedback also preserves the performance for static tasks and has slightly better SR than GR00T.</p>
+            <p><strong>Note:</strong> VLA-Feedback maintains performance comparable to GR00T on static manipulation tasks.</p>
           </div>
         </div>
       </div>
@@ -177,7 +177,34 @@
       </div>
     </div>
     <!--/ Abstract. -->
+  </div>
+</section>
 
+
+<section class="section">
+  <div class="container is-max-widescreen">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Method Overview</h2>
+        <img src="./static/images/architecture.png" alt="VLA-Feedback architecture diagram.">
+        <div class="content has-text-justified">
+          <p>
+            VLA-Feedback separates slow planning from fast action correction. The VLM-DiT planner
+            processes the observations and language instruction to generate a near-final action chunk,
+            stopping before the last denoising step. During execution, a lightweight feedback module
+            combines the planned actions with the latest camera observation and completes this final
+            denoising step at every control timestep. This allows the robot to correct its actions in
+            real time without repeatedly running the full planner.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-widescreen">
     <!-- Paper video. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
@@ -189,18 +216,6 @@
       </div>
     </div>
     <!--/ Paper video. -->
-  </div>
-</section>
-
-
-<section class="section">
-  <div class="container is-max-widescreen">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Architecture</h2>
-        <img src="./static/images/architecture.png" alt="VLA-Feedback architecture diagram.">
-      </div>
-    </div>
   </div>
 </section>
 
@@ -301,6 +316,18 @@
           <source src="./static/videos/simulation/dropballcolor_f.mp4" type="video/mp4">
         </video>
         <p class="mt-3 has-text-centered"><strong>GR00T <span class="has-text-danger">(Baseline)</span></strong></p>
+      </div>
+    </div>
+
+    <div class="columns is-centered mt-6">
+      <div class="column is-four-fifths content has-text-justified">
+        <p>
+          The videos highlight a major failure mode of the GR00T baseline: delayed reactions to
+          changes in object motion. When a moving target suddenly stops or changes direction, GR00T
+          continues executing actions based on an outdated observation. In contrast, VLA-Feedback uses
+          the latest observation at every control step, allowing the robot to respond much sooner and
+          adjust its motion accordingly.
+        </p>
       </div>
     </div>
   </div>
