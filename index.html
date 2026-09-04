@@ -72,7 +72,7 @@
               </span>
               <!-- Video Link. -->
               <span class="link-block">
-                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
+                <a href="https://www.youtube.com/watch?v=vvC1BRbRLWc"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-youtube"></i>
@@ -107,21 +107,21 @@
           <video autoplay muted loop playsinline height="100%">
             <source src="./static/videos/hardware/can_s.mp4" type="video/mp4">
           </video>
-          <p class="mt-3"><strong>Caption:</strong> caption caption caption caption caption caption.</p>
+          <p class="mt-3 has-text-centered"><strong>VLA-Feedback <span class="has-text-success">(Ours)</span></strong></p>
         </div>
         <div class="column is-4">
-          <p class="is-size-4 has-text-weight-bold has-text-centered mb-4">Dropping the lemon to the moving cup</p>
+          <p class="is-size-4 has-text-weight-bold has-text-centered mb-4">Drop the lemon into the moving cup</p>
           <video autoplay muted loop playsinline height="100%">
             <source src="./static/videos/hardware/lemon_s.mp4" type="video/mp4">
           </video>
-          <p class="mt-3"><strong>Caption:</strong> caption caption caption caption caption caption.</p>
+          <p class="mt-3 has-text-centered"><strong>VLA-Feedback <span class="has-text-success">(Ours)</span></strong></p>
         </div>
         <div class="column is-4">
           <p class="is-size-4 has-text-weight-bold has-text-centered mb-4">Pick up the bread</p>
           <video autoplay muted loop playsinline height="100%">
             <source src="./static/videos/hardware/bread_s.mp4" type="video/mp4">
           </video>
-          <p class="mt-3"><strong>Caption:</strong> caption caption caption caption caption caption.</p>
+          <p class="mt-3 has-text-centered"><strong>VLA-Feedback <span class="has-text-success">(Ours)</span></strong></p>
         </div>
       </div>
       <div class="columns">
@@ -129,13 +129,18 @@
           <video autoplay muted loop playsinline height="100%">
             <source src="./static/videos/hardware/can_f.mp4" type="video/mp4">
           </video>
-          <p class="mt-3"><strong>Caption:</strong> caption caption caption caption caption caption.</p>
+          <p class="mt-3 has-text-centered"><strong>GR00T <span class="has-text-danger">(Baseline)</span></strong></p>
         </div>
         <div class="column is-4">
           <video autoplay muted loop playsinline height="100%">
             <source src="./static/videos/hardware/lemon_f.mp4" type="video/mp4">
           </video>
-          <p class="mt-3"><strong>Caption:</strong> caption caption caption caption caption caption.</p>
+          <p class="mt-3 has-text-centered"><strong>GR00T <span class="has-text-danger">(Baseline)</span></strong></p>
+        </div>
+        <div class="column is-4 is-flex is-flex-direction-column is-justify-content-center">
+          <div class="box">
+            <p><strong>Note:</strong> VLA-Feedback also preserves the performance for static tasks and has slightly better SR than GR00T.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -178,7 +183,7 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Video</h2>
         <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
+          <iframe src="https://www.youtube.com/embed/vvC1BRbRLWc?rel=0&amp;showinfo=0"
                   frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
       </div>
@@ -192,97 +197,110 @@
   <div class="container is-max-widescreen">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
+        <h2 class="title is-3">Architecture</h2>
+        <img src="./static/images/architecture.png" alt="VLA-Feedback architecture diagram.">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-widescreen">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
         <h2 class="title is-3">Simulation</h2>
+        <p class="is-size-6">* denotes an unseen-generalization task, testing an object, speed, or color not seen during training.</p>
       </div>
     </div>
 
     <div class="columns is-centered">
       <div class="column is-4">
-        <p class="is-size-4 has-text-weight-bold has-text-centered mb-4">Red Toy Go</p>
+        <p class="is-size-4 has-text-weight-bold has-text-centered mb-4">1D Moving Robot</p>
         <video autoplay muted loop playsinline height="100%">
-          <source src="./static/videos/simulation/red_toy_go/episode_0000_agentview_success.mp4" type="video/mp4">
+          <source src="./static/videos/simulation/redtoy_s.mp4" type="video/mp4">
         </video>
-        <p class="mt-3"><strong>Caption:</strong> caption caption caption caption caption caption.</p>
+        <p class="mt-3 has-text-centered"><strong>VLA-Feedback <span class="has-text-success">(Ours)</span></strong></p>
       </div>
       <div class="column is-4">
-        <p class="is-size-4 has-text-weight-bold has-text-centered mb-4">Green Toy</p>
+        <p class="is-size-4 has-text-weight-bold has-text-centered mb-4">2D Moving Robot</p>
         <video autoplay muted loop playsinline height="100%">
-          <source src="./static/videos/simulation/green_toy/episode_0003_agentview_success.mp4" type="video/mp4">
+          <source src="./static/videos/simulation/greentoy_s.mp4" type="video/mp4">
         </video>
-        <p class="mt-3"><strong>Caption:</strong> caption caption caption caption caption caption.</p>
+        <p class="mt-3 has-text-centered"><strong>VLA-Feedback <span class="has-text-success">(Ours)</span></strong></p>
       </div>
       <div class="column is-4">
-        <p class="is-size-4 has-text-weight-bold has-text-centered mb-4">Drop Ball</p>
+        <p class="is-size-4 has-text-weight-bold has-text-centered mb-4">Drop Ball to Cup</p>
         <video autoplay muted loop playsinline height="100%">
-          <source src="./static/videos/simulation/drop_ball/episode_0003_agentview_success.mp4" type="video/mp4">
+          <source src="./static/videos/simulation/dropball_s.mp4" type="video/mp4">
         </video>
-        <p class="mt-3"><strong>Caption:</strong> caption caption caption caption caption caption.</p>
+        <p class="mt-3 has-text-centered"><strong>VLA-Feedback <span class="has-text-success">(Ours)</span></strong></p>
       </div>
     </div>
 
     <div class="columns">
       <div class="column is-4">
         <video autoplay muted loop playsinline height="100%">
-          <source src="./static/videos/simulation/red_toy_go/episode_0002_agentview_fail.mp4" type="video/mp4">
+          <source src="./static/videos/simulation/redtoy_f.mp4" type="video/mp4">
         </video>
-        <p class="mt-3"><strong>Caption:</strong> caption caption caption caption caption caption.</p>
+        <p class="mt-3 has-text-centered"><strong>GR00T <span class="has-text-danger">(Baseline)</span></strong></p>
       </div>
       <div class="column is-4">
         <video autoplay muted loop playsinline height="100%">
-          <source src="./static/videos/simulation/green_toy/episode_0001_agentview_fail.mp4" type="video/mp4">
+          <source src="./static/videos/simulation/greentoy_f.mp4" type="video/mp4">
         </video>
-        <p class="mt-3"><strong>Caption:</strong> caption caption caption caption caption caption.</p>
+        <p class="mt-3 has-text-centered"><strong>GR00T <span class="has-text-danger">(Baseline)</span></strong></p>
       </div>
       <div class="column is-4">
         <video autoplay muted loop playsinline height="100%">
-          <source src="./static/videos/simulation/drop_ball/episode_0002_agentview_fail.mp4" type="video/mp4">
+          <source src="./static/videos/simulation/dropball_f.mp4" type="video/mp4">
         </video>
-        <p class="mt-3"><strong>Caption:</strong> caption caption caption caption caption caption.</p>
+        <p class="mt-3 has-text-centered"><strong>GR00T <span class="has-text-danger">(Baseline)</span></strong></p>
       </div>
     </div>
 
     <div class="columns is-centered mt-6">
       <div class="column is-4">
-        <p class="is-size-4 has-text-weight-bold has-text-centered mb-4">Catch Block</p>
+        <p class="is-size-4 has-text-weight-bold has-text-centered mb-4">Catch Block*</p>
         <video autoplay muted loop playsinline height="100%">
-          <source src="./static/videos/simulation/catch_block/episode_0003_agentview_success.mp4" type="video/mp4">
+          <source src="./static/videos/simulation/catchblock_s.mp4" type="video/mp4">
         </video>
-        <p class="mt-3"><strong>Caption:</strong> caption caption caption caption caption caption.</p>
+        <p class="mt-3 has-text-centered"><strong>VLA-Feedback <span class="has-text-success">(Ours)</span></strong></p>
       </div>
       <div class="column is-4">
-        <p class="is-size-4 has-text-weight-bold has-text-centered mb-4">Red Toy Speed</p>
+        <p class="is-size-4 has-text-weight-bold has-text-centered mb-4">1D Robot Speed*</p>
         <video autoplay muted loop playsinline height="100%">
-          <source src="./static/videos/simulation/toy_red_speed/episode_0000_agentview_success.mp4" type="video/mp4">
+          <source src="./static/videos/simulation/redtoyspeed_s.mp4" type="video/mp4">
         </video>
-        <p class="mt-3"><strong>Caption:</strong> caption caption caption caption caption caption.</p>
+        <p class="mt-3 has-text-centered"><strong>VLA-Feedback <span class="has-text-success">(Ours)</span></strong></p>
       </div>
       <div class="column is-4">
-        <p class="is-size-4 has-text-weight-bold has-text-centered mb-4">Drop Ball Color</p>
+        <p class="is-size-4 has-text-weight-bold has-text-centered mb-4">Drop Ball Color*</p>
         <video autoplay muted loop playsinline height="100%">
-          <source src="./static/videos/simulation/drop_ball_color/episode_0000_agentview_success.mp4" type="video/mp4">
+          <source src="./static/videos/simulation/dropballcolor_s.mp4" type="video/mp4">
         </video>
-        <p class="mt-3"><strong>Caption:</strong> caption caption caption caption caption caption.</p>
+        <p class="mt-3 has-text-centered"><strong>VLA-Feedback <span class="has-text-success">(Ours)</span></strong></p>
       </div>
     </div>
 
     <div class="columns">
       <div class="column is-4">
         <video autoplay muted loop playsinline height="100%">
-          <source src="./static/videos/simulation/catch_block/episode_0000_agentview_fail.mp4" type="video/mp4">
+          <source src="./static/videos/simulation/catchblock_f.mp4" type="video/mp4">
         </video>
-        <p class="mt-3"><strong>Caption:</strong> caption caption caption caption caption caption.</p>
+        <p class="mt-3 has-text-centered"><strong>GR00T <span class="has-text-danger">(Baseline)</span></strong></p>
       </div>
       <div class="column is-4">
         <video autoplay muted loop playsinline height="100%">
-          <source src="./static/videos/simulation/toy_red_speed/episode_0000_agentview_fail.mp4" type="video/mp4">
+          <source src="./static/videos/simulation/redtoyspeed_f.mp4" type="video/mp4">
         </video>
-        <p class="mt-3"><strong>Caption:</strong> caption caption caption caption caption caption.</p>
+        <p class="mt-3 has-text-centered"><strong>GR00T <span class="has-text-danger">(Baseline)</span></strong></p>
       </div>
       <div class="column is-4">
         <video autoplay muted loop playsinline height="100%">
-          <source src="./static/videos/simulation/drop_ball_color/episode_0000_agentview_fail.mp4" type="video/mp4">
+          <source src="./static/videos/simulation/dropballcolor_f.mp4" type="video/mp4">
         </video>
-        <p class="mt-3"><strong>Caption:</strong> caption caption caption caption caption caption.</p>
+        <p class="mt-3 has-text-centered"><strong>GR00T <span class="has-text-danger">(Baseline)</span></strong></p>
       </div>
     </div>
   </div>
@@ -315,18 +333,15 @@
     </div>
     <div class="columns is-centered">
       <div class="column is-8">
-        <div class="content">
+        <div class="content is-size-7 has-text-centered">
           <p>
             This website is licensed under a <a rel="license"
                                                 href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
             Commons Attribution-ShareAlike 4.0 International License</a>.
           </p>
           <p>
-            This means you are free to borrow the <a
-              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
-            we just ask that you link back to this page in the footer.
-            Please remember to remove the analytics code included in the header of the website which
-            you do not want on your website.
+            This website has been modified from the <a
+              href="https://github.com/nerfies/nerfies.github.io">Nerfies</a> website.
           </p>
         </div>
       </div>
